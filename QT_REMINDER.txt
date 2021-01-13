@@ -1,0 +1,30 @@
+*** QT FRAMEWORK ***
+
+* Definition: Qt is cross-platform application development framework for desktop, embedded and mobile.
+* Supported Platforms: Linux, OS X, Windows, VxWorks, QNX, Android, iOS, BlackBerry, Sailfish OS, ...
+* QTCreator: integrated development environment (IDE) for qt applications.
+* Qt Designer: interactive graphical tool which functions as code generator for widgets based GUIs. integrated into QTCreator.
+* QMake: cross-platform frontend for platform-native build systems. it automates generation of make files that describes compilation process. (qmake [mode] [options] files)
+* Qt Resource System: platform-independent mechanism for storing binary files (icons, translation files, images, ...) in application's executable.
+* QML: declarative object description language that integrates Javascript for procedural programming.
+* MOC: meta-object compiler. preprocessor that parses source files written in Qt-extended C++ and generates standard compliant C++ sources from them.
+* UIC: user interface compiler. processes ui files.
+* Parenting System: any object that inherits from QObject can have parent and children.
+
+[PROJECT FILE]
+* Project File (.pro): used by qmake to generate make files that contain all commands that are needed to build each project.
+* Resource File (.qrc): XML-based file that lists references to resources associated with application.
+* Source File (.cpp)
+* Header File (.h)
+* Comment
+* Variables
+* Control Structures
+* Built-In Functions
+* Libraries
+* Project Templates
+* Platform Specification
+
+[NOTES]
+* Most basic class is QObject. object name, parenting system, signals, slots, event management, ...
+* Nearly all graphical elements are inherited from QWidget class.
+

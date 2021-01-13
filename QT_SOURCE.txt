@@ -1,0 +1,9 @@
+*** QT FRAMEWORK ***
+
+[SOFTWARE]
+Compiler: MSVC (https://visualstudio.microsoft.com/)
+Framework: QT (https://www.qt.io/)
+IDE: QT Creator
+
+[SOURCE LIST]
+01-HelloWorld
