@@ -2,7 +2,7 @@
 
 * Definition: Qt is cross-platform application development framework for desktop, embedded and mobile.
 * Supported Platforms: Linux, OS X, Windows, VxWorks, QNX, Android, iOS, BlackBerry, Sailfish OS, ...
-* QTCreator: integrated development environment (IDE) for qt applications.
+* QTCreator: integrated development environment (IDE) for Qt applications.
 * Qt Designer: interactive graphical tool which functions as code generator for widgets based GUIs. integrated into QTCreator.
 * QMake: cross-platform frontend for platform-native build systems. it automates generation of make files that describes compilation process. (qmake [mode] [options] files)
 * Qt Resource System: platform-independent mechanism for storing binary files (icons, translation files, images, ...) in application's executable.
@@ -10,6 +10,11 @@
 * MOC: meta-object compiler. preprocessor that parses source files written in Qt-extended C++ and generates standard compliant C++ sources from them.
 * UIC: user interface compiler. processes ui files.
 * Parenting System: any object that inherits from QObject can have parent and children.
+* Observer Pattern: observable object wants to notify observing objects about state change. example: callback, listener.
+* Signal: message that object can send, most of time to inform of status change. example: clicked, pressed, released, ...
+* Slot: function that is used to accept and respond to signal. slot must be connected to signal via QObject::connect() method. example: quit, setEnabled, setText, ...
+   - QObject::Connect(Sender, SIGNAL(sendSignal), Receiver, SLOT(setState))
+* Signal Relaying: signal is connected to signal. secon signal is sent if firs signal is sent.
 
 [PROJECT FILE]
 * Project File (.pro): used by qmake to generate make files that contain all commands that are needed to build each project.
@@ -24,7 +29,18 @@
 * Project Templates
 * Platform Specification
 
+[META-OBJECT SYSTEM]
+* Paradigms: Introspection, Asynchronous Function Calls.
+* Introspection: examining type at run-time.
+* MOC produces code that includes signals and slots signatures, methods for meta-information retrieval, properties handling.
+   - const QMetaObject *QObject::metaObject() const
+* Q_OBJECT macro marks class as it is interpretable by MOC.
+* SIGNAL macro specifies signatures of signals.
+* SLOT macro specifies slots corresponding to signals.
+
 [NOTES]
 * Most basic class is QObject. object name, parenting system, signals, slots, event management, ...
 * Nearly all graphical elements are inherited from QWidget class.
+* Signal can be connected to several slots.
+* Many signals can be connected to single slot.
 

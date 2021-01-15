@@ -7,3 +7,6 @@ IDE: QT Creator
 
 [SOURCE LIST]
 01-HelloWorld
+02-Subclassing
+03-SignalTransmit
+04-CustomSignalSlot
