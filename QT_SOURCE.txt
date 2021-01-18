@@ -10,3 +10,6 @@ IDE: QT Creator
 02-Subclassing
 03-SignalTransmit
 04-CustomSignalSlot
+05-BasicGUI
+06-ParentChild
+07-Layout

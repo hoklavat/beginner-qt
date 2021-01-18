@@ -15,12 +15,14 @@
 * Slot: function that is used to accept and respond to signal. slot must be connected to signal via QObject::connect() method. example: quit, setEnabled, setText, ...
    - QObject::Connect(Sender, SIGNAL(sendSignal), Receiver, SLOT(setState))
 * Signal Relaying: signal is connected to signal. secon signal is sent if firs signal is sent.
+* Window Layout: usually child widgets are arranged inside window using layout objects rather than by specifying positions and sizes explicitly. it manages positions and sizes of widgets supplied to it.
 
 [PROJECT FILE]
 * Project File (.pro): used by qmake to generate make files that contain all commands that are needed to build each project.
 * Resource File (.qrc): XML-based file that lists references to resources associated with application.
 * Source File (.cpp)
 * Header File (.h)
+* UI Form File (.ui)
 * Comment
 * Variables
 * Control Structures
@@ -37,6 +39,10 @@
 * Q_OBJECT macro marks class as it is interpretable by MOC.
 * SIGNAL macro specifies signatures of signals.
 * SLOT macro specifies slots corresponding to signals.
+
+[MODULES]
+* QTWidget: provides set of UI elements to create classic desktop-style user interfaces.
+* QTQuick:  provides all basic types necessary for creating user interfaces with QML.
 
 [NOTES]
 * Most basic class is QObject. object name, parenting system, signals, slots, event management, ...
