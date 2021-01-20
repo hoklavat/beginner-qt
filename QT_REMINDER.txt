@@ -16,6 +16,10 @@
    - QObject::Connect(Sender, SIGNAL(sendSignal), Receiver, SLOT(setState))
 * Signal Relaying: signal is connected to signal. secon signal is sent if firs signal is sent.
 * Window Layout: usually child widgets are arranged inside window using layout objects rather than by specifying positions and sizes explicitly. it manages positions and sizes of widgets supplied to it.
+* Model/View Architecture: manage relationship between data and the way it is presented to user. Model/View/Delegate classes.
+* Model-View-Controller: MVC. design pattern originating from Smalltalk that is often used when building user interfaces. model is application object,  view is its screen presentation, controller defines way ui reacts to user input.
+* Model: provides standard interface that views and delegates use to access data. QAbstractItemModel. List/Table/Tree.
+* Model Index: represents each piece of information that can be obtained via model. views and delegates use these index to request items of data to display. QModelIndex, QPersistentModelIndex.
 
 [PROJECT FILE]
 * Project File (.pro): used by qmake to generate make files that contain all commands that are needed to build each project.
@@ -43,6 +47,32 @@
 [MODULES]
 * QTWidget: provides set of UI elements to create classic desktop-style user interfaces.
 * QTQuick:  provides all basic types necessary for creating user interfaces with QML.
+
+[LAYOUTS]
+* QHBoxLayout: horizontal layout.
+* QVBoxLayout: vertical layout.
+* QGridLayout: grid layout.
+* QFormLayout: form layout.
+
+[MODELS]
+* QStringListModel: used to store simple list of QString items.
+* QStandardItemModel: manages complex tree structures of items, each of which can contain arbitrary data.
+* QFileSystemModel: provides information about files and directories in local filing system.
+* QSqlQueryModel/QSqlTableModel/QSqlRelationalTableModel: used to access databases using model/view conventions.
+*  QAbstractItemModel/QAbstractListModel/QAbstractTableModel: interfaces to create custom model classes.
+
+[VIEWS]
+* QListView: displays list of items.
+* QTableView: displays data from model in table.
+* QTreeView: shows model items of data in hierarchical list.
+* QAbstractItemView: interface for all view classes.
+* Convenience Classes: QListWidget, QTreeWidget, QTableWidget.
+
+[DELEGATES]
+* QAbstractItemDelegate: abstract base class for delegates in model/view framework.
+* QStyledItemDelegate: used as default delegate by Qt standard views. uses current style to paint its items.
+* QItemDelegate: alternative to QStyledItemDelegate except, it doesn't use current style to paint its items.
+
 
 [NOTES]
 * Most basic class is QObject. object name, parenting system, signals, slots, event management, ...
