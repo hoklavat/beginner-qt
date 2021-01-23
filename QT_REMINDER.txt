@@ -20,6 +20,8 @@
 * Model-View-Controller: MVC. design pattern originating from Smalltalk that is often used when building user interfaces. model is application object,  view is its screen presentation, controller defines way ui reacts to user input.
 * Model: provides standard interface that views and delegates use to access data. QAbstractItemModel. List/Table/Tree.
 * Model Index: represents each piece of information that can be obtained via model. views and delegates use these index to request items of data to display. QModelIndex, QPersistentModelIndex.
+* View: obtains items of data from model and presents them to user. QAbstractItemView.
+* Delegate: allows flexibility in intearaction while obtaining input from user. QAbstractItemDelegate. QStyledItemDelegate.
 
 [PROJECT FILE]
 * Project File (.pro): used by qmake to generate make files that contain all commands that are needed to build each project.
@@ -59,13 +61,15 @@
 * QStandardItemModel: manages complex tree structures of items, each of which can contain arbitrary data.
 * QFileSystemModel: provides information about files and directories in local filing system.
 * QSqlQueryModel/QSqlTableModel/QSqlRelationalTableModel: used to access databases using model/view conventions.
-*  QAbstractItemModel/QAbstractListModel/QAbstractTableModel: interfaces to create custom model classes.
+* QAbstractItemModel/QAbstractListModel/QAbstractTableModel: interfaces to create custom model classes.
+* QItemSelectionModel: mechanism for handling selections of items within views. selectionModel(), setSelectionModel().
 
 [VIEWS]
 * QListView: displays list of items.
 * QTableView: displays data from model in table.
 * QTreeView: shows model items of data in hierarchical list.
 * QAbstractItemView: interface for all view classes.
+* QHeaderView:retrieve data from model using QAbstractItemModel::headerData() function, and display header information in form of label.
 * Convenience Classes: QListWidget, QTreeWidget, QTableWidget.
 
 [DELEGATES]
@@ -73,10 +77,8 @@
 * QStyledItemDelegate: used as default delegate by Qt standard views. uses current style to paint its items.
 * QItemDelegate: alternative to QStyledItemDelegate except, it doesn't use current style to paint its items.
 
-
 [NOTES]
 * Most basic class is QObject. object name, parenting system, signals, slots, event management, ...
 * Nearly all graphical elements are inherited from QWidget class.
 * Signal can be connected to several slots.
 * Many signals can be connected to single slot.
-
