@@ -22,6 +22,7 @@
 * Model Index: represents each piece of information that can be obtained via model. views and delegates use these index to request items of data to display. QModelIndex, QPersistentModelIndex.
 * View: obtains items of data from model and presents them to user. QAbstractItemView.
 * Delegate: allows flexibility in intearaction while obtaining input from user. QAbstractItemDelegate. QStyledItemDelegate.
+* Selection Model: used in item view classes provides general description of selections based on facilities of model/view architecture. QItemSelectionModel.
 
 [PROJECT FILE]
 * Project File (.pro): used by qmake to generate make files that contain all commands that are needed to build each project.

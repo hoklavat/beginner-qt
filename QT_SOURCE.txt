@@ -13,3 +13,9 @@ IDE: QT Creator
 05-BasicGUI
 06-ParentChild
 07-Layout
+08-QML
+09-ModelView
+10-NestedLayout
+11-ListView
+12-TableView
+13-Delegate
