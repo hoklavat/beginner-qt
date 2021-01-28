@@ -2,8 +2,8 @@
 
 * Definition: Qt is cross-platform application development framework for desktop, embedded and mobile.
 * Supported Platforms: Linux, OS X, Windows, VxWorks, QNX, Android, iOS, BlackBerry, Sailfish OS, ...
-* QTCreator: integrated development environment (IDE) for Qt applications.
-* Qt Designer: interactive graphical tool which functions as code generator for widgets based GUIs. integrated into QTCreator.
+* Qt Creator: integrated development environment (IDE) for Qt applications.
+* Qt Designer: interactive graphical tool which functions as code generator for widgets based GUIs. integrated into Qt Creator.
 * QMake: cross-platform frontend for platform-native build systems. it automates generation of make files that describes compilation process. (qmake [mode] [options] files)
 * Qt Resource System: platform-independent mechanism for storing binary files (icons, translation files, images, ...) in application's executable.
 * QML: declarative object description language that integrates Javascript for procedural programming.
@@ -14,9 +14,9 @@
 * Signal: message that object can send, most of time to inform of status change. example: clicked, pressed, released, ...
 * Slot: function that is used to accept and respond to signal. slot must be connected to signal via QObject::connect() method. example: quit, setEnabled, setText, ...
    - QObject::Connect(Sender, SIGNAL(sendSignal), Receiver, SLOT(setState))
-* Signal Relaying: signal is connected to signal. secon signal is sent if firs signal is sent.
+* Signal Relaying: signal is connected to another signal. second signal is sent after first signal is sent.
 * Window Layout: usually child widgets are arranged inside window using layout objects rather than by specifying positions and sizes explicitly. it manages positions and sizes of widgets supplied to it.
-* Model/View Architecture: manage relationship between data and the way it is presented to user. Model/View/Delegate classes.
+* Model/View Architecture: manage relationship between data and way it is presented to user. Model/View/Delegate classes.
 * Model-View-Controller: MVC. design pattern originating from Smalltalk that is often used when building user interfaces. model is application object,  view is its screen presentation, controller defines way ui reacts to user input.
 * Model: provides standard interface that views and delegates use to access data. QAbstractItemModel. List/Table/Tree.
 * Model Index: represents each piece of information that can be obtained via model. views and delegates use these index to request items of data to display. QModelIndex, QPersistentModelIndex.
@@ -77,6 +77,20 @@
 * QAbstractItemDelegate: abstract base class for delegates in model/view framework.
 * QStyledItemDelegate: used as default delegate by Qt standard views. uses current style to paint its items.
 * QItemDelegate: alternative to QStyledItemDelegate except, it doesn't use current style to paint its items.
+
+[MAIN WINDOW]
+* Main Window: QMainWindow
+* Menu Bar: QMenuBar
+* Menu: QMenu
+* Menu Action: QAction
+* Tool Bar: QToolBar
+* Docking Widgets: QDockWidgets
+* Status Bar: QStatusBar
+* Single Document Interface: SDI
+* Multiple Document Interface: MDI. QMDIArea
+* Central Widget: setCentralWidget()
+
+
 
 [NOTES]
 * Most basic class is QObject. object name, parenting system, signals, slots, event management, ...
